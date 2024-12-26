@@ -9,7 +9,7 @@ const links = [
         path: "/",
     },
     {
-        name: "services",
+        name: "Services",
         path: "/services",
     },
     {
@@ -35,11 +35,11 @@ const NavDesktop = () => {
                     <Link
                         href={link.path}
                         key={index}
-                        className={`${link.path === pathname ? "text-accent border-b-2 border-accent" : "border-b-2 border-transparent"} capitalize font-medium hover:text-accent transition-all`}
+                        className={`${
+                            link.path === pathname ? "text-accent font-bold" : "text-white"} capitalize font-medium hover:text-accent transition-all`}
                     >
                         {link.name}
                     </Link>
-
                 );
             })}
         </nav>
