@@ -18,10 +18,16 @@ export default {
 			lg: "960px",
 			Xl: "1200px",
 		},
+		fontFamily: {
+			primary: "var(--font-jetbrainsmono)",
+		},
 		extend: {
 			colors: {
-				background: 'var(--background)',
-				foreground: 'var(--foreground)'
+				primary: "#111111",
+				accent: {
+					DEFAULT: "#E11D48",
+					hover: "#CF1840",
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
