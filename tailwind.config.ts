@@ -16,7 +16,7 @@ export default {
 			sm: "640px",
 			md: "768px",
 			lg: "960px",
-			Xl: "1200px",
+			xl: "1200px",
 		},
 		fontFamily: {
 			primary: "var(--font-jetbrainsmono)",
