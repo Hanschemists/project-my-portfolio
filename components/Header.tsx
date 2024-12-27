@@ -1,9 +1,11 @@
 import Link from "next/link";
-import { Button } from "./ui/button";
 
 //Components
 import NavDesktop from "./NavDesktop";
 import NavMobile from "./NavMobile";
+
+//UI Components
+import { Button } from "./ui/button";
 
 const Header = () => {
     return (
