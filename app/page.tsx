@@ -2,6 +2,7 @@
 import Socials from "@/components/Socials";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
+import DynamicText from "@/components/DynamicText";
 
 //UI Components
 import { Button } from "@/components/ui/button"
@@ -16,10 +17,14 @@ const home = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* Text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Software Developer</span>
 
-            <h1 className="h1 mb-6">
-              Hello I'm <br /> <span className="text-accent">Mew Korrawit</span>
+            <h1 className="text-[32px] lg:text-[40px] xl:text-[48px] font-bold mb-0">
+              Hello it's <span className="text-accent">Mew</span>
+            </h1>
+
+            {/* DynamicText */}
+            <h1 className="text-[24px] lg:text-[32px] xl:text-[40px] font-bold mb-6 text-white">
+              I'm <DynamicText texts={['Software Developer', 'UX/UI Designer']} />
             </h1>
 
             <p className="max-w-[500px] mb-9 text-white/80">
@@ -28,13 +33,13 @@ const home = () => {
 
             {/* Button & Socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button 
+              <Button
                 variant="outline"
                 size="lg"
                 className="uppercase flex items-center gap-2"
               >
                 <span>Download CV</span>
-                
+
                 <FiDownload className="text-xl" />
               </Button>
 
