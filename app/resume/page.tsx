@@ -79,7 +79,7 @@ const experience = {
 const education = {
     icon: "",
     title: "My Education",
-    description: "My professional experience spans diverse roles in web development, from freelancing as a Front-End Developer to interning as a Full Stack Developer at Betagro Public Company Limited. These opportunities have allowed me to enhance my technical expertise, collaborate on various projects, and deliver solutions that meet real-world needs. Currently, I continue to grow as a Full Stack Developer, leveraging my skills to create impactful and innovative web applications.",
+    description: "A journey through diverse roles in front-end and full-stack development, showcasing adaptability and a commitment to growth.",
     items: [
         {
             insitution: "Thammasat University",
@@ -183,7 +183,7 @@ const resume = () => {
                                                     <span className="text-accent">{item.duration}</span>
 
                                                     {/* Position */}
-                                                    <h3 className="font-bold max-w-[260px] min-h-[40px] text-center lg:text-left">{item.position}</h3>
+                                                    <h3 className="font-bold max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
 
                                                     {/* Border */}
                                                     <div className="border-b border-white/20 w-full mt-2 mb-2"></div>
@@ -203,12 +203,51 @@ const resume = () => {
                             </div>
                         </TabsContent>
 
+                        {/* Education */}
                         <TabsContent value="education" className="w-full">
-                            company
+                            <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                                {/* Title */}
+                                <h3 className="text-4xl font-bold">{education.title}</h3>
+
+                                {/* Description */}
+                                <p className="text-white/60 mx-auto xl:mx-0">
+                                    {education.description}
+                                </p>
+
+                                <ScrollArea className="h-[400px]">
+                                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                                        {education.items.map((item, index) => {
+                                            return (
+                                                <li
+                                                    key={index}
+                                                    className="bg-[#1E1E1E] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                                                >
+                                                    {/* Duration */}
+                                                    <span className="text-accent">{item.duration}</span>
+
+                                                    {/* Position */}
+                                                    <h3 className="font-bold max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
+
+                                                    {/* Border */}
+                                                    <div className="border-b border-white/20 w-full mt-2 mb-2"></div>
+
+                                                    <div className="flex items-center gap-3">
+                                                        {/* dot */}
+                                                        <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+
+                                                        {/* Company */}
+                                                        <p className="text-sm text-white/80">{item.insitution}</p>
+                                                    </div>
+                                                </li>
+                                            );
+                                        })}
+                                    </ul>
+                                </ScrollArea>
+                            </div>
                         </TabsContent>
 
                         <TabsContent value="skills" className="w-full">
-                            Skills
+                            
                         </TabsContent>
 
                         <TabsContent value="about" className="w-full">
