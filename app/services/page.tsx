@@ -11,25 +11,25 @@ const Items = [
         num: "01",
         title: "Web Development",
         description: "I offer services ranging from simple static sites to advanced web applications.",
-        path: ""
+        path: "/contact"
     },
     {
         num: "02",
         title: "UX/UI Design",
         description: "I design interfaces that are intuitive, functional, and visually appealing.",
-        path: ""
+        path: "/contact"
     },
     {
         num: "03",
         title: "Logo Design",
         description: "I create logos that are unique, memorable, and help your brand stand out.",
-        path: ""
+        path: "/contact"
     },
     {
         num: "04",
         title: "SEO",
         description: "I optimize websites for search engines to attract more traffic and visibility.",
-        path: ""
+        path: "/contact"
     }
 ];
 
@@ -85,15 +85,3 @@ const services = () => {
 };
 
 export default services;
-
-// <div key={index} className="flex flex-col">
-//     <div className="flex items-center justify-center bg-primary text-white w-12 h-12 rounded-full">
-//         <p className="text-2xl font-bold">{services.num}</p>
-//     </div>
-//     <h3 className="text-2xl font-bold mt-4">{services.title}</h3>
-//     <p className="text-lg mt-4">{services.description}</p>
-//     <Link href={services.path} className="flex items-center mt-4 text-primary">
-//         <p>Learn More</p>
-//         <BsArrowDownRight className="ml-2" />
-//     </Link>
-// </div>
